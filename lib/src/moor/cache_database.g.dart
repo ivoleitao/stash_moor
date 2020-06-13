@@ -89,6 +89,32 @@ class CacheData extends DataClass implements Insertable<CacheData> {
     return map;
   }
 
+  CacheTableCompanion toCompanion(bool nullToAbsent) {
+    return CacheTableCompanion(
+      name: name == null && nullToAbsent ? const Value.absent() : Value(name),
+      key: key == null && nullToAbsent ? const Value.absent() : Value(key),
+      expiryTime: expiryTime == null && nullToAbsent
+          ? const Value.absent()
+          : Value(expiryTime),
+      creationTime: creationTime == null && nullToAbsent
+          ? const Value.absent()
+          : Value(creationTime),
+      accessTime: accessTime == null && nullToAbsent
+          ? const Value.absent()
+          : Value(accessTime),
+      updateTime: updateTime == null && nullToAbsent
+          ? const Value.absent()
+          : Value(updateTime),
+      hitCount: hitCount == null && nullToAbsent
+          ? const Value.absent()
+          : Value(hitCount),
+      extra:
+          extra == null && nullToAbsent ? const Value.absent() : Value(extra),
+      value:
+          value == null && nullToAbsent ? const Value.absent() : Value(value),
+    );
+  }
+
   factory CacheData.fromJson(Map<String, dynamic> json,
       {ValueSerializer serializer}) {
     serializer ??= moorRuntimeOptions.defaultSerializer;

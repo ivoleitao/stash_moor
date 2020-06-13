@@ -10,9 +10,15 @@ part 'cache_database.g.dart';
 ], daos: [
   CacheDao
 ])
+
+/// The database class
 class CacheDatabase extends _$CacheDatabase {
+  /// The version if the schema
   static const int SchemaVersion = 1;
 
+  /// Builds a [CacheDatabase]
+  ///
+  /// * [executor]: The [QueryExecutor] to user
   CacheDatabase(QueryExecutor executor) : super(executor);
 
   @override

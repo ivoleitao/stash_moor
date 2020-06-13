@@ -1,6 +1,7 @@
 import 'package:moor/moor.dart';
 
-/// Provides a [TypeConverter] for Moor that stores a [Datetime] in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
+/// Provides a [TypeConverter] for Moor that stores a [Datetime] in
+/// [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
 class Iso8601Converter extends TypeConverter<DateTime, String> {
   /// Builds a new [Iso8601Converter]
   const Iso8601Converter();
