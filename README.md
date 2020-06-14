@@ -1,5 +1,5 @@
 # stash_moor
-A [Stash](https://github.com/ivoleitao/stash) Moor storage extension
+A [stash](https://github.com/ivoleitao/stash) storage extension for [moor](https://pub.dev/packages/moor)
 
 [![Pub Package](https://img.shields.io/pub/v/stash_moor.svg?style=flat-square)](https://pub.dartlang.org/packages/stash_moor)
 [![Build Status](https://github.com/ivoleitao/shadertoy_api/workflows/build/badge.svg)](https://github.com/ivoleitao/stash_moor/actions)
