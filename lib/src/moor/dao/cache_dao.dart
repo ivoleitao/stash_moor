@@ -15,7 +15,7 @@ class CacheDao extends DatabaseAccessor<CacheDatabase> with _$CacheDaoMixin {
   /// * [db]: The [CacheDatabase]
   CacheDao(CacheDatabase db) : super(db);
 
-  /// Counts the number of keys on a named cache
+  /// Counts the number of entries on a named cache
   ///
   /// * [name]: The name of the cache
   ///
