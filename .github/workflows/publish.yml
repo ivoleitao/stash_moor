@@ -16,7 +16,7 @@ jobs:
       - name: Setup System
         run: |
           apt-get update
-          apt-get install sqlite3 -y
+          apt-get install libsqlite3-dev -y
       - name: Checkout code
         uses: actions/checkout@v1
       - name: Install dependencies
