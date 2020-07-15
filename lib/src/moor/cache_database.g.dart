@@ -339,6 +339,22 @@ class CacheTableCompanion extends UpdateCompanion<CacheData> {
     }
     return map;
   }
+
+  @override
+  String toString() {
+    return (StringBuffer('CacheTableCompanion(')
+          ..write('name: $name, ')
+          ..write('key: $key, ')
+          ..write('expiryTime: $expiryTime, ')
+          ..write('creationTime: $creationTime, ')
+          ..write('accessTime: $accessTime, ')
+          ..write('updateTime: $updateTime, ')
+          ..write('hitCount: $hitCount, ')
+          ..write('extra: $extra, ')
+          ..write('value: $value')
+          ..write(')'))
+        .toString();
+  }
 }
 
 class $CacheTableTable extends CacheTable
