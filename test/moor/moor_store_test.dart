@@ -1,5 +1,5 @@
+import 'package:moor/ffi.dart';
 import 'package:moor/moor.dart';
-import 'package:moor_ffi/moor_ffi.dart';
 import 'package:stash/stash_harness.dart';
 import 'package:stash_moor/stash_moor.dart';
 import 'package:test/test.dart';
@@ -34,6 +34,7 @@ class ObjectContext extends DefaultContext {
 }
 
 void main() async {
+  moorRuntimeOptions.dontWarnAboutMultipleDatabases = true;
   test('Boolean', () async {
     await testStoreWith<MoorStore>(DefaultContext(BoolGenerator()));
     await testCacheWith<MoorStore>(DefaultContext(BoolGenerator()));
