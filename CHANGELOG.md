@@ -1,3 +1,7 @@
+## 1.0.2
+
+- TODO
+
 ## 1.0.1
 
 - Fixed a typo in the published README
