@@ -18,7 +18,7 @@ Add this to your `pubspec.yaml` (or create it):
 
 ```dart
 dependencies:
-    stash_moor: ^1.0.0-dev.4
+    stash_moor: ^1.0.1
 ```
 
 Run the following command to install dependencies:
