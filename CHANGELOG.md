@@ -1,4 +1,4 @@
-## 1.0.0-dev.4
+## 1.0.0
 
 - First official release of this package
 - Updated to 2.9.0 sdk version
