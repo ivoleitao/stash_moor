@@ -35,6 +35,7 @@ class ObjectContext extends DefaultContext {
 
 void main() async {
   moorRuntimeOptions.dontWarnAboutMultipleDatabases = true;
+
   test('Boolean', () async {
     await testStoreWith<MoorStore>(DefaultContext(BoolGenerator()));
     await testCacheWith<MoorStore>(DefaultContext(BoolGenerator()));
