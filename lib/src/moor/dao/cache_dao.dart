@@ -71,11 +71,8 @@ class CacheDao extends DatabaseAccessor<CacheDatabase> with _$CacheDaoMixin {
     var updateTime = converter.mapToDart(row.read(cacheTable.updateTime));
     var hitCount = row.read(cacheTable.hitCount);
 
-    return CacheStat(key, expiryTime,
-        creationTime: creationTime,
-        accessTime: accessTime,
-        updateTime: updateTime,
-        hitCount: hitCount);
+    return CacheStat(key, expiryTime, creationTime,
+        accessTime: accessTime, updateTime: updateTime, hitCount: hitCount);
   }
 
   /// Returns the list of all cache headers on a named cache
@@ -99,7 +96,7 @@ class CacheDao extends DatabaseAccessor<CacheDatabase> with _$CacheDaoMixin {
       CacheData data, dynamic Function(Uint8List) valueDecoder) {
     return data != null
         ? CacheEntry(data.key, valueDecoder(data.value), data.expiryTime,
-            creationTime: data.creationTime,
+            data.creationTime,
             accessTime: data.accessTime,
             updateTime: data.updateTime,
             hitCount: data.hitCount)
